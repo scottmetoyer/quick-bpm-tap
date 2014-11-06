@@ -18,6 +18,13 @@
  */
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
 }
 
 body {
@@ -36,24 +43,10 @@ body {
 
 /* Portrait layout (default) */
 #app {
-    position: absolute; /* position in the center of the screen */
-    left: 50%;
-    top: 50%;
-    height: 50px; /* text area height */
-    width: 225px; /* text area width */
-    text-align: center;
-    padding: 180px 0px 0px 0px; /* image height is 200px (bottom 20px are overlapped with text) */
-    margin: -115px 0px 0px -112px; /* offset vertical: half of image height and text area height */
-    /* offset horizontal: half of text area width */
 }
 
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
-    #app {
-        padding: 75px 0px 75px 170px; /* padding-top + padding-bottom + text area = image height */
-        margin: -90px 0px 0px -198px; /* offset vertical: half of image height */
-        /* offset horizontal: half of image width and text area width */
-    }
 }
 
 .pulse {
@@ -81,16 +74,55 @@ body {
     }
 }
 
-div.bpm {
-    background-color: red;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    font-size: 200px;
+div.main {
+    background-color: #AA0000;
+    margin-top: 0;
+    margin-left: 0;
+    width: 100%;
+    height: 50vh;
     color: #000;
+    text-align: center;
+}
+
+div.bpm-container {
+    background-color: blue;
+    height: 50vh;
+    padding-bottom: 10px;
+}
+
+    div.bpm-container > div {
+    }
+
+[class*='col-'] {
+    float: left;
+    width: 50%;
+    height: 50%;
     text-align: center;
     vertical-align: middle;
 }
+
+.col-1 {
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+.col-2 {
+    padding-right: 10px;
+    padding-left: 5px;
+}
+
+[class*='col-'] {
+    padding-top: 10px;
+}
+
+    [class*='col-']:last-of-type {
+    }
+
+
+    .box {
+        border: solid 1px #000;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        padding: 6px;
+    }
