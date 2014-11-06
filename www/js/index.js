@@ -36,5 +36,9 @@ var app = {
     onDeviceReady: function() {
     },
     onPointerDown: function (evt) {
+        document.body.className = '';
+        setTimeout(function () {
+            document.body.className = 'pulse';
+        }, 5);
     }
 };
