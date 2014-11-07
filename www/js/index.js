@@ -36,9 +36,22 @@ var app = {
     onDeviceReady: function() {
     },
     onPointerDown: function (evt) {
+        // Set animation for the body and label background
         document.body.className = '';
+        var labels = document.getElementsByClassName('label');
+
+        for (var i = 0; i < labels.length; i++) {
+            labels[i].className = 'label';
+        }
+
         setTimeout(function () {
             document.body.className = 'pulse';
+
+            for (var i = 0; i < labels.length; i++) {
+                labels[i].className = 'label pulse';
+            }
         }, 5);
+
+
     }
 };
