@@ -40,6 +40,7 @@ body {
     background-color: #E4E4E4;
     font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size: 12px;
+    color: #202020;
     height: 100%;
     margin: 0px;
     padding: 0px;
@@ -80,14 +81,23 @@ body {
     }
 }
 
+div.notification {
+    height:10vh;
+    text-align: center;
+    font-size: 3.6vh;
+    font-weight: bold;
+    padding: 2vh;
+    color: #707070;
+}
+
 div.main {
     margin-top: 0;
     margin-left: 0;
     width: 100%;
-    height: 50vh;
+    height: 40vh;
     color: #000;
     text-align: center;
-    line-height: 50vh;
+    line-height: 36vh;
     font-size: 16vh;
     font-weight: bold;
 }
@@ -124,9 +134,9 @@ div.bpm-container {
     [class*='col-']:last-of-type {
     }
 
-
 .box {
     border: solid 1px #000;
+    border-color: #707070;
     width: 100%;
     height: 100%;
     margin: auto;
@@ -139,6 +149,8 @@ div.bpm-container {
     margin-top: -16px;
     font-size: 16pt;
     background-color: #E4E4E4;
+    color: #707070;
+    border-color: #707070;
     width: 80px;
     margin-left: auto;
     margin-right: auto;
