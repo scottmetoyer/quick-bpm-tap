@@ -127,9 +127,11 @@ var app = {
         }
 
         // Set the two second longpress trigger
+        /*
         app.pressTimer = window.setTimeout(function () {
             app.reset();
         }, 2000);
+        */
 
         app.updateLabels(app.bpm);
         app.lastUpdate = tap;
