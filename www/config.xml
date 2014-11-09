@@ -2,10 +2,10 @@
 <widget id="com.scottmetoyer.bpmtap" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Quick BPM Tap</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Calculate music BPM (beats per minute) by tapping the screen of your mobile device. Includes convenient real-time calculation of common BPM fractions and multiples.  
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="scott.metoyer@gmail.com" href="http://scottmetoyer.com">
+        Scott Metoyer
     </author>
     <content src="index.html" />
     <access origin="*" />
