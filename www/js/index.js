@@ -34,8 +34,18 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function () {
         document.addEventListener('deviceready', this.onDeviceReady, false);
-        document.addEventListener("pointerdown", this.onPointerDown, false);
-        document.addEventListener("pointerup", this.onPointerUp, false);
+
+        var container = document.getElementById('container');
+        container.addEventListener("pointerdown", this.onPointerDown, false);
+        container.addEventListener("pointerup", this.onPointerUp, false);
+
+        var notification = document.getElementById('notification');
+        notification.addEventListener("pointerdown", this.onResetClicked, false);
+    },
+
+    onResetClicked: function (evt) {
+        app.reset();
+        evt.preventDefault();
     },
 
     reset: function () {
@@ -52,7 +62,7 @@ var app = {
         var bpm32 = document.getElementById('bpm-32');
         var bpm64 = document.getElementById('bpm-64');
 
-        if (bpm > 0) {
+        if (bpm >= 0) {
             bpm16.innerText = bpm.toFixed(1);
             bpm4.innerText = (bpm / 4).toFixed(1);
             bpm8.innerText = (bpm / 2).toFixed(1);
@@ -81,23 +91,8 @@ var app = {
     },
 
     onPointerDown: function (evt) {
-        // Animate the tap pulse
-        document.body.className = '';
-        var labels = document.getElementsByClassName('label');
-
-        for (var i = 0; i < labels.length; i++) {
-            labels[i].className = 'label';
-        }
-
-        setTimeout(function () {
-            document.body.className = 'pulse';
-
-            for (var i = 0; i < labels.length; i++) {
-                labels[i].className = 'label pulse';
-            }
-        }, 1);
-
         var tap = Date.now();
+        app.bpm = 0;
 
         if (app.lastUpdate > 0) {
             length = tap - app.lastUpdate;

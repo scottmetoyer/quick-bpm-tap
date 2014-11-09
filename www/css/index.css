@@ -57,13 +57,13 @@ body {
 }
 
 .pulse {
-    -webkit-animation: pulse .5s;
-    animation: pulse .5s;
+    -webkit-animation: pulse .75s;
+    animation: pulse .75s;
 }
 
 @-webkit-keyframes pulse {
     from {
-        background-color: #FF9900;
+        background-color: #888888;
     }
 
     to {
@@ -73,7 +73,7 @@ body {
 
 @keyframes pulse {
     from {
-        background-color: #FF9900;
+        background-color: #888888;
     }
 
     to {
@@ -81,13 +81,15 @@ body {
     }
 }
 
-div.notification {
-    height:10vh;
+div#notification {
+    height:8vh;
     text-align: center;
     font-size: 3.6vh;
     font-weight: bold;
     padding: 2vh;
     color: #707070;
+    text-align: center;
+    background-color: #FF9900;
 }
 
 div.main {
