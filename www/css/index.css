@@ -63,7 +63,7 @@ body {
 
 @-webkit-keyframes pulse {
     from {
-        background-color: #D0D0D0;
+        background-color: #FF9900;
     }
 
     to {
@@ -73,7 +73,7 @@ body {
 
 @keyframes pulse {
     from {
-        background-color: #A8A8A8;
+        background-color: #FF9900;
     }
 
     to {
@@ -147,7 +147,7 @@ div.bpm-container {
 .label {
     font-weight: bold;
     margin-top: -16px;
-    font-size: 20px;
+    font-size: 24px;
     background-color: #E4E4E4;
     color: #707070;
     border-color: #707070;

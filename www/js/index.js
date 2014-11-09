@@ -42,7 +42,7 @@ var app = {
         app.lastUpdate = 0;
         app.bpm = 0;
         app.history = [];
-        app.updateLabels(app.bpm);
+        app.updateLabels(-1);
     },
 
     updateLabels: function (bpm) {
@@ -52,18 +52,20 @@ var app = {
         var bpm32 = document.getElementById('bpm-32');
         var bpm64 = document.getElementById('bpm-64');
 
-        if (bpm == 0) {
-            bpm16.innerText = "TAP";
-            bpm4.innerText = 0;
-            bpm8.innerText = 0;
-            bpm32.innerText = 0;
-            bpm64.innerText = 0;
-        } else {
+        if (bpm > 0) {
             bpm16.innerText = bpm.toFixed(1);
             bpm4.innerText = (bpm / 4).toFixed(1);
             bpm8.innerText = (bpm / 2).toFixed(1);
             bpm32.innerText = (bpm * 2).toFixed(1);
             bpm64.innerText = (bpm * 4).toFixed(1);
+        }
+
+        if (bpm == -1) {
+            bpm16.innerText = "TAP";
+            bpm4.innerText = 0;
+            bpm8.innerText = 0;
+            bpm32.innerText = 0;
+            bpm64.innerText = 0;
         }
     },
 
@@ -93,7 +95,7 @@ var app = {
             for (var i = 0; i < labels.length; i++) {
                 labels[i].className = 'label pulse';
             }
-        }, 5);
+        }, 1);
 
         var tap = Date.now();
 
