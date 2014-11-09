@@ -109,7 +109,13 @@ var app = {
 
             // Convert length to a BPM value
             var bpm = ((60 / length) * 1000);
+
+            // Add the bpm value to the history list
             app.history.push(bpm);
+
+            if (app.history.length >= 10) {
+                app.history = app.history.slice(4);
+            }
 
             // Average the bpm
             var average = 0;
