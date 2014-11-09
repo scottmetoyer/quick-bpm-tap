@@ -149,7 +149,7 @@ div.bpm-container {
 .label {
     font-weight: bold;
     margin-top: -16px;
-    font-size: 3vh;
+    font-size: 24px;
     background-color: #E4E4E4;
     color: #707070;
     border-color: #707070;
@@ -162,6 +162,5 @@ div.bpm-container {
     font-size: 7vh;
     font-weight: bold;
     position: relative;
-    top: 30%;
-    transform: translateY(-30%);
+    line-height: 18vh;
 }
