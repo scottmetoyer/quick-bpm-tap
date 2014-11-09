@@ -11,4 +11,5 @@
   <access origin="*" />
   <preference name="phonegap-version" value="3.6.3" />
   <icon src="res/icon.png" />
+  <preference name="permissions" value="none"/>
 </widget>
