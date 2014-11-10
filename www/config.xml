@@ -12,4 +12,5 @@
   <preference name="phonegap-version" value="3.6.3" />
   <icon src="res/icon.png" />
   <preference name="permissions" value="none"/>
+  <preference name="android-minSdkVersion" value="19" />
 </widget>
